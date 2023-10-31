@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "start": "nodemon server.ts"
+    "start": "nodemon server.ts",
+    "data:import": "npx ts-node backend/seeder.ts",
+    "data:destroy": "npx ts-node backend/seeder.ts -d"
   },
   "keywords": [],
   "author": "",

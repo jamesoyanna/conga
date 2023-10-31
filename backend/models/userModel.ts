@@ -40,7 +40,7 @@ userSchema.methods.matchPassword = async function (
 };
 
 /**
- * Runs before the model saves and hecks to see if password has been
+ * Runs before the model saves and checks to see if password has been
  * modified and hashes the password before saving to database
  */
 userSchema.pre("save", async function (this: UserDocument, next) {
