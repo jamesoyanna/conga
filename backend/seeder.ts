@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import users from "./data/users";
 import products from "./data/products";
-import { User, Product } from "./models/";
+import { User, Product, Order } from "./models/";
 import { UserDocument, Review } from "./types/";
 import connectDB from "./config/db";
 
@@ -22,6 +22,7 @@ const importData = async () => {
     // Clear any existing items from DB
     await Product.deleteMany();
     await User.deleteMany();
+    await Order.deleteMany();
 
     const createdUsers = await User.insertMany(users);
 
@@ -51,6 +52,7 @@ const destroyData = async () => {
     // Clear any existing items from DB
     await Product.deleteMany();
     await User.deleteMany();
+    await Order.deleteMany();
 
     console.log("Data Destroyed!");
 
