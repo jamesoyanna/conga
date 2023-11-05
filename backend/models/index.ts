@@ -1,3 +1,4 @@
 import { User } from "./userModel";
 import { Product } from "./productModel";
-export { User, Product };
+import { Order } from "./orderModel";
+export { User, Product, Order };
