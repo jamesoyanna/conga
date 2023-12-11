@@ -26,29 +26,6 @@ const orderSchema = new Schema(
           type: Number,
           required: true,
         },
-        discount: {
-          type: Number,
-        },
-        color: {
-          type: String,
-          enum: ["<list of available colors>"],
-        },
-        size: {
-          type: String,
-          pattern: "^[XS|S|M|L|XL|XXL])$",
-        },
-        shippingFee: {
-          type: Number,
-          required: true,
-        },
-        shippingDiscount: {
-          type: Number,
-          required: true,
-        },
-        totalPrice: {
-          type: Number,
-          required: true,
-        },
         product: {
           type: Schema.Types.ObjectId,
           required: true,
