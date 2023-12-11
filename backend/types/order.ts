@@ -9,6 +9,8 @@ export interface OrderItems {
   qty: number;
   image: string;
   price: number;
+  color: string;
+  size;
   product: ProductDocument;
 }
 
@@ -16,10 +18,17 @@ export interface OrderItems {
  * Represents a shipping address for a user
  */
 export interface ShippingAddress {
-  address: string;
-  city: string;
-  postalCode: string;
+  email: string;
   country: string;
+  first_name: string;
+  last_name: string;
+  company?: string;
+  address: string;
+  apartment: string;
+  city: string;
+  state: string;
+  postalCode: string;
+  phone_number: string;
 }
 
 /**
